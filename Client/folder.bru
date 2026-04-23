@@ -1,8 +1,15 @@
 meta {
   name: Client
-  seq: 1
 }
 
 auth {
-  mode: inherit
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{client_token}}
+}
+
+vars:pre-request {
+  client_token: 
 }

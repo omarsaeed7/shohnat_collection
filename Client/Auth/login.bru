@@ -1,11 +1,11 @@
 meta {
-  name: requestOtp
+  name: login
   type: http
-  seq: 1
+  seq: 4
 }
 
 post {
-  url: {{client_url}}/auth/request-otp
+  url: {{client_url}}/auth/login
   body: json
   auth: inherit
 }
@@ -14,9 +14,12 @@ body:json {
   {
     "phone": "01023572563",
     "phone_code": "+20",
-    "type": "user",
-    "channel": "whatsapp"
+    "password" : "123123123"
   }
+}
+
+vars:post-response {
+  client_token: res.body.body.token
 }
 
 settings {
