@@ -1,0 +1,15 @@
+meta {
+  name: requestOtp
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{client_url}}/auth/request-otp
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
