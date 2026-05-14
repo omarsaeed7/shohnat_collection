@@ -1,0 +1,25 @@
+meta {
+  name: updateClientBankAccount
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{client_url}}/client/bank-accounts/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:multipart-form {
+  bank_id: 2
+  IBAN: 33
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

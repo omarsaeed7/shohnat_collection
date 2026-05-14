@@ -12,14 +12,14 @@ post {
 
 body:json {
   {
-    "phone": "01023572563",
+    "phone": "1023572562",
     "phone_code": "+20",
     "password" : "123123123"
   }
 }
 
 vars:post-response {
-  client_token: res.body.body.token
+  client_token: res.body.data.token
 }
 
 settings {

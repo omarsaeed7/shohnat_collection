@@ -6,14 +6,26 @@ meta {
 
 post {
   url: {{client_url}}/auth/complete-profile
-  body: json
+  body: multipartForm
   auth: inherit
 }
 
 body:json {
   {
-    "name":"omar"
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
   }
+}
+
+body:multipart-form {
+  full_name: test
+  email: test@email.com
+  password: 123123123
+  password_confirmation: 123123123
+  profile_image: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+  city_id: 1
 }
 
 settings {

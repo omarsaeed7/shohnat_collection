@@ -1,0 +1,16 @@
+meta {
+  name: getAllShipments
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{client_url}}/shipments
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
