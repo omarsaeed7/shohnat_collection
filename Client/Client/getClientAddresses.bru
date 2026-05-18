@@ -1,0 +1,15 @@
+meta {
+  name: getClientAddresses
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{client_url}}/client/addresses
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

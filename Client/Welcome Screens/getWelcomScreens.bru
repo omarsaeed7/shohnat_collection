@@ -1,0 +1,15 @@
+meta {
+  name: getWelcomScreens
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{client_url}}/client/welcome-screens
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

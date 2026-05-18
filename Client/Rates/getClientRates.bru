@@ -1,0 +1,16 @@
+meta {
+  name: getClientRates
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{client_url}}/client/rates
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

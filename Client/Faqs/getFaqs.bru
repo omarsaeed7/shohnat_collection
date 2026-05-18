@@ -1,0 +1,15 @@
+meta {
+  name: getFaqs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{client_url}}/client/faqs
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

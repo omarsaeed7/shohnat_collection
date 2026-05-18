@@ -1,0 +1,23 @@
+meta {
+  name: createClientAddress
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{client_url}}/client/addresses
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  latitude: 30.3433
+  longitude: 31.3242
+  national_address: App
+  slug: 1. St
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

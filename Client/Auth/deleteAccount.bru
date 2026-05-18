@@ -1,17 +1,13 @@
 meta {
-  name: deleteBankAccount
+  name: deleteAccount
   type: http
-  seq: 5
+  seq: 11
 }
 
 delete {
-  url: {{client_url}}/client/bank-accounts/:id
+  url: {{client_url}}/auth/delete-account
   body: none
   auth: inherit
-}
-
-params:path {
-  id: 4
 }
 
 settings {
