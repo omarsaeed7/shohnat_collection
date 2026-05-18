@@ -1,11 +1,11 @@
 meta {
-  name: verifyOtp
+  name: resendOtp
   type: http
-  seq: 2
+  seq: 5
 }
 
 post {
-  url: {{client_url}}/auth/verify-otp
+  url: {{driver_url}}/auth/resend-otp
   body: json
   auth: inherit
 }
@@ -14,12 +14,13 @@ body:json {
   {
     "phone": "1023572562",
     "phone_code": "+20",
-    "otp": "123456"
+    "profile_type": "client",
+    "channel": "whatsapp"
   }
 }
 
 vars:post-response {
-  client_token: res.body.data.token
+  client_otp: res.body.data.access_token
 }
 
 settings {

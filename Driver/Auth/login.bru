@@ -1,25 +1,25 @@
 meta {
-  name: verifyOtp
+  name: login
   type: http
-  seq: 2
+  seq: 4
 }
 
 post {
-  url: {{client_url}}/auth/verify-otp
+  url: {{driver_url}}/auth/login
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "phone": "1023572562",
+    "phone": "1023572561",
     "phone_code": "+20",
-    "otp": "123456"
+    "password" : "123123123"
   }
 }
 
 vars:post-response {
-  client_token: res.body.data.token
+  driver_token: res.body.data.token
 }
 
 settings {

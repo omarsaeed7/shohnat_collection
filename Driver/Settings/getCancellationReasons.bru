@@ -1,11 +1,11 @@
 meta {
-  name: getClientAddresses
+  name: getCancellationReasons
   type: http
-  seq: 1
+  seq: 4
 }
 
 get {
-  url: {{client_url}}/addresses
+  url: {{driver_url}}/cancellation-reasons
   body: none
   auth: inherit
 }

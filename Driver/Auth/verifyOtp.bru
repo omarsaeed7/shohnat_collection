@@ -5,21 +5,21 @@ meta {
 }
 
 post {
-  url: {{client_url}}/auth/verify-otp
+  url: {{driver_url}}/auth/verify-otp
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "phone": "1023572562",
+    "phone": "1023572561",
     "phone_code": "+20",
     "otp": "123456"
   }
 }
 
 vars:post-response {
-  client_token: res.body.data.token
+  driver_token: res.body.data.token
 }
 
 settings {

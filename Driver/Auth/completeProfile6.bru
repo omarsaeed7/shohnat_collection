@@ -1,0 +1,30 @@
+meta {
+  name: completeProfile6
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{driver_url}}/auth/complete-profile/step-6
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
+  }
+}
+
+body:multipart-form {
+  images[0]: @file(/home/nami/Pictures/ford-logo-2017-download.png)
+  images[1]: @file(/home/nami/Pictures/tesla-logo-2007-black-download.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

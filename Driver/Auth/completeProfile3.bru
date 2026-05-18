@@ -1,0 +1,32 @@
+meta {
+  name: completeProfile3
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{driver_url}}/auth/complete-profile/step-3
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
+  }
+}
+
+body:multipart-form {
+  nationality_id: 1
+  identity_number: 123
+  birth_date: 1990-12-12
+  hijri_birth_date: 1990-12-12
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

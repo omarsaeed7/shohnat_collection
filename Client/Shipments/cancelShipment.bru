@@ -1,17 +1,17 @@
 meta {
-  name: deleteBankAccount
+  name: cancelShipment
   type: http
-  seq: 5
+  seq: 7
 }
 
-delete {
-  url: {{client_url}}/bank-accounts/:id
+post {
+  url: {{client_url}}/shipments/:shipmentId/cancel
   body: none
   auth: inherit
 }
 
 params:path {
-  id: 1
+  shipmentId: 1
 }
 
 settings {

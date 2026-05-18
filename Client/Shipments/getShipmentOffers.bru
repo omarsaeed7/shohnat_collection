@@ -1,11 +1,11 @@
 meta {
-  name: deleteBankAccount
+  name: getShipmentOffers
   type: http
   seq: 5
 }
 
-delete {
-  url: {{client_url}}/bank-accounts/:id
+post {
+  url: {{client_url}}/shipments/:id/offers
   body: none
   auth: inherit
 }

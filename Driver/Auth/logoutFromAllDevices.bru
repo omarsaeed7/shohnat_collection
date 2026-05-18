@@ -1,11 +1,11 @@
 meta {
-  name: getClientAddresses
+  name: logoutFromAllDevices
   type: http
-  seq: 1
+  seq: 9
 }
 
-get {
-  url: {{client_url}}/addresses
+post {
+  url: {{driver_url}}/auth/logout-all
   body: none
   auth: inherit
 }

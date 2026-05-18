@@ -1,0 +1,34 @@
+meta {
+  name: completeProfile1
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{driver_url}}/auth/complete-profile/step-1
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
+  }
+}
+
+body:multipart-form {
+  full_name: test
+  email: test@email.com
+  password: 123123123
+  password_confirmation: 123123123
+  profile_image: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+  driver_type: individual
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

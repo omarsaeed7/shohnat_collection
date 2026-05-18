@@ -1,0 +1,33 @@
+meta {
+  name: completeProfile5
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{driver_url}}/auth/complete-profile/step-5
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
+  }
+}
+
+body:multipart-form {
+  vehicle_brand_id: 1
+  vehicle_model: 1
+  vehicle_color_id: 1
+  manufacture_year: 2027
+  plate_number: 123
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
