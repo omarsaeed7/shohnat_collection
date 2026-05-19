@@ -1,0 +1,24 @@
+meta {
+  name: createNegotiation
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{driver_url}}/shipments/:shipmentId/negotiations
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+}
+
+body:multipart-form {
+  offered_price: 200
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

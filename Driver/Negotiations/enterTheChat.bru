@@ -1,0 +1,21 @@
+meta {
+  name: enterTheChat
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{driver_url}}/shipments/:shipmentId/negotiations/:negotiationId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+  negotiationId: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
