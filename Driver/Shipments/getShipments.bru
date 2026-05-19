@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{driver_url}}/shipments/available
+  url: {{driver_url}}/shipments/available?pickup_address=cairo&delivery_address=Cairo
   body: none
   auth: inherit
+}
+
+params:query {
+  pickup_address: cairo
+  delivery_address: Cairo
 }
 
 settings {
