@@ -1,0 +1,20 @@
+meta {
+  name: updateDailyTrip
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{driver_url}}/daily-trips/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

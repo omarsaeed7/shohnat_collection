@@ -1,0 +1,16 @@
+meta {
+  name: getShipments
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{driver_url}}/shipments/available
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

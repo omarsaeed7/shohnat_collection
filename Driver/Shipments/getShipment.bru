@@ -1,0 +1,20 @@
+meta {
+  name: getShipment
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{driver_url}}/shipments/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

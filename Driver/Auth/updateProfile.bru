@@ -1,0 +1,40 @@
+meta {
+  name: updateProfile
+  type: http
+  seq: 18
+}
+
+put {
+  url: {{driver_url}}/auth/profile
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  driver_type: individual
+  full_name: test
+  email: test21@email.com
+  password: 123123123
+  password_confirmation: 123123123
+  vehicle_type_id: 1
+  city_id: 1
+  nationality_id: 1
+  identity_number: 123
+  hijri_birth_date: 1410-06-18
+  birth_date: 1990-01-15
+  images[0]: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+  images[1]: @file(/home/nami/Pictures/ford-logo-2017-download.png)
+  ~license_expiration_date: 
+  ~license_front_image: 
+  ~license_back_image: 
+  ~vehicle_brand_id: 
+  ~vehicle_model: 
+  ~vehicle_color_id: 
+  ~manufacture_year: 
+  ~plate_number: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

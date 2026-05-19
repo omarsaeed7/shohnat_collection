@@ -1,0 +1,21 @@
+meta {
+  name: createBankAccount
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{driver_url}}/bank-accounts
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  bank_id: 1
+  IBAN: 123123123123
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: deleteBankAccount
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{driver_url}}/bank-accounts/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
