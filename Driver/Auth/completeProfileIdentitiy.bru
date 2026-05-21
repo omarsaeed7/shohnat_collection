@@ -1,13 +1,17 @@
 meta {
-  name: completeProfile3
+  name: completeProfileIdentitiy
   type: http
-  seq: 3
+  seq: 5
 }
 
 post {
   url: {{driver_url}}/auth/complete-profile/step-3
   body: multipartForm
   auth: inherit
+}
+
+headers {
+  Accept-Language: ar
 }
 
 body:json {

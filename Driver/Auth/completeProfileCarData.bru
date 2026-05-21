@@ -1,7 +1,7 @@
 meta {
-  name: completeProfile5
+  name: completeProfileCarData
   type: http
-  seq: 3
+  seq: 7
 }
 
 post {
@@ -25,6 +25,9 @@ body:multipart-form {
   vehicle_color_id: 1
   manufacture_year: 2027
   plate_number: 123
+  serial_number: 123123123123
+  car_license_expiration_date: 2026-12-01
+  car_license_image: @file(/home/nami/Pictures/toyota-logo-2020-europe-download.png)
 }
 
 settings {

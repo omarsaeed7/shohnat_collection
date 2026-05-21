@@ -1,17 +1,17 @@
 meta {
-  name: getAvailableShipments
+  name: getNationalities
   type: http
   seq: 3
 }
 
 get {
-  url: {{client_url}}/shipments/available?per_page=1
+  url: {{driver_url}}/nationalities
   body: none
   auth: inherit
 }
 
-params:query {
-  per_page: 1
+headers {
+  Accept-Language: en
 }
 
 settings {

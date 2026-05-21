@@ -1,17 +1,17 @@
 meta {
-  name: getAllShipments
+  name: getVehicleBrands
   type: http
-  seq: 2
+  seq: 4
 }
 
 get {
-  url: {{client_url}}/shipments?per_page=1
+  url: {{driver_url}}/vehicle-brands
   body: none
   auth: inherit
 }
 
-params:query {
-  per_page: 1
+headers {
+  Accept-Language: ar
 }
 
 settings {

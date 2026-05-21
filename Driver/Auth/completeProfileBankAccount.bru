@@ -1,0 +1,30 @@
+meta {
+  name: completeProfileBankAccount
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{driver_url}}/auth/complete-profile/step-7
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "omar",
+    "city_id": 1,
+    "password": "123123123",
+    "password_confirmation": "123123123"
+  }
+}
+
+body:multipart-form {
+  bank_id: 1
+  IBAN: 22232
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,11 +1,11 @@
 meta {
-  name: completeProfile7
+  name: completeProfileGeneralData
   type: http
   seq: 3
 }
 
 post {
-  url: {{driver_url}}/auth/complete-profile/step-7
+  url: {{driver_url}}/auth/complete-profile/step-1
   body: multipartForm
   auth: inherit
 }
@@ -20,8 +20,12 @@ body:json {
 }
 
 body:multipart-form {
-  bank_id: 1
-  IBAN: 123123
+  full_name: test
+  email: test@email.com
+  password: 123123123
+  password_confirmation: 123123123
+  image: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+  driver_type: individual
 }
 
 settings {

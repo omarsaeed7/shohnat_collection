@@ -1,16 +1,15 @@
 meta {
-  name: logout
+  name: getVehicleTypes
   type: http
-  seq: 14
+  seq: 1
 }
 
-post {
-  url: {{driver_url}}/auth/logout
+get {
+  url: {{driver_url}}/vehicle-types
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
 }

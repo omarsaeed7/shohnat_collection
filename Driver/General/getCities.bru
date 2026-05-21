@@ -1,13 +1,17 @@
 meta {
-  name: logout
+  name: getCities
   type: http
-  seq: 14
+  seq: 2
 }
 
-post {
-  url: {{driver_url}}/auth/logout
+get {
+  url: {{driver_url}}/cities
   body: none
   auth: inherit
+}
+
+headers {
+  Accept-Language: ar
 }
 
 settings {
