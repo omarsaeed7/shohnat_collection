@@ -1,0 +1,20 @@
+meta {
+  name: getDailyTrips
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{client_url}}/daily-trips?per_page=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  per_page: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

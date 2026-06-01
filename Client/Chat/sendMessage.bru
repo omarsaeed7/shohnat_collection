@@ -1,22 +1,22 @@
 meta {
-  name: createNegotiation (1)
+  name: sendMessage
   type: http
-  seq: 3
+  seq: 2
 }
 
 post {
-  url: {{driver_url}}/shipments/:shipmentId/negotiations/:negotiationId/messages
+  url: {{client_url}}/:shipmentId/send
   body: multipartForm
   auth: inherit
 }
 
 params:path {
-  negotiationId: 1
   shipmentId: 1
 }
 
 body:multipart-form {
-  offered_price: 200
+  message_type: negotiation
+  message: 500
 }
 
 settings {

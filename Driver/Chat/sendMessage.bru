@@ -1,11 +1,11 @@
 meta {
-  name: createNegotiation
+  name: sendMessage
   type: http
   seq: 2
 }
 
 post {
-  url: {{driver_url}}/shipments/:shipmentId/negotiations
+  url: {{driver_url}}/:shipmentId/send
   body: multipartForm
   auth: inherit
 }
@@ -15,7 +15,8 @@ params:path {
 }
 
 body:multipart-form {
-  offered_price: 200
+  message: Hel
+  message_type: normal
 }
 
 settings {

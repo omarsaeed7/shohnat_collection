@@ -1,12 +1,12 @@
 meta {
-  name: updateDailyTrip
+  name: getDailyTrip
   type: http
-  seq: 4
+  seq: 2
 }
 
-put {
-  url: {{driver_url}}/daily-trips/:id
-  body: multipartForm
+get {
+  url: {{client_url}}/daily-trips/:id
+  body: none
   auth: inherit
 }
 

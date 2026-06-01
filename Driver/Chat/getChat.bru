@@ -1,0 +1,20 @@
+meta {
+  name: getChat
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{driver_url}}/:shipmentId/chat
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
