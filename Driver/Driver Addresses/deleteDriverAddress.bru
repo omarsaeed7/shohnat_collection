@@ -1,0 +1,20 @@
+meta {
+  name: deleteDriverAddress
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{driver_url}}/addresses/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

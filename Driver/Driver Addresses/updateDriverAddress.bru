@@ -1,0 +1,26 @@
+meta {
+  name: updateDriverAddress
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{driver_url}}/addresses/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:multipart-form {
+  latitude: 23
+  longitude: 43
+  national_address: test
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

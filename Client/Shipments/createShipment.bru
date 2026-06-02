@@ -12,29 +12,27 @@ post {
 
 body:multipart-form {
   vehicle_type_id: 1
-  type: building tools
-  weight: 27
-  recipient_phone: 01023
-  pickup_city_id: 1
-  pickup_address: cairo
+  pickup_national_address_name: test
   pickup_latitude: 30.33
   pickup_longitude: 31.322
-  delivery_city_id: 1
-  delivery_address: cairo
+  delivery_national_address_name: test2
   delivery_latitude: 30.23
   delivery_longitude: 32.23
+  type: building tools
+  weight: 27
+  recipient_phone: 0554213123
   is_scheduled: 1
   pickup_date: 2026-12-12
   pickup_time: 10:30
-  addition_details: 
+  addition_details: test
   coupon: 
-  discount_value: 
-  discount_type: 
-  total_price: 20
   images[0]: @file(/home/nami/Pictures/tesla-logo-2007-black-download.png)
   images[1]: @file(/home/nami/Pictures/tesla-logo-2007-full-download.png)
   images[2]: @file(/home/nami/Pictures/toyota-logo-2020-europe-download.png)
   images[3]: @file(/home/nami/Pictures/honda-logo-2000-full-download.png)
+  ~pickup_address_id: 1
+  ~delivery_address_id: 1
+  ~sender_phone: 0553123123
 }
 
 settings {
