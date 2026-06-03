@@ -1,17 +1,17 @@
 meta {
-  name: getChat
+  name: acceptOffer
   type: http
-  seq: 1
+  seq: 3
 }
 
-get {
-  url: {{driver_url}}/:shipmentId/chat
+post {
+  url: {{driver_url}}/:shipmentId/offers/accept
   body: none
   auth: inherit
 }
 
 params:path {
-  shipmentId: 2
+  shipmentId: 3
 }
 
 settings {

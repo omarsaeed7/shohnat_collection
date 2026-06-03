@@ -5,21 +5,27 @@ meta {
 }
 
 post {
-  url: {{client_url}}/:shipmentId/send
+  url: {{client_url}}/:shipmentId/send/:driverId
   body: multipartForm
   auth: inherit
 }
 
 params:path {
-  shipmentId: 1
+  driverId: 2
+  shipmentId: 3
 }
 
 body:multipart-form {
   message_type: negotiation
-  message: 500
+  message: 23
 }
 
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+  - message : String | number
+  - message_type : normal | negotiation 
 }

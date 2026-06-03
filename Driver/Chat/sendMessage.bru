@@ -11,15 +11,20 @@ post {
 }
 
 params:path {
-  shipmentId: 1
+  shipmentId: 3
 }
 
 body:multipart-form {
-  message: Hel
+  message: 31
   message_type: normal
 }
 
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+docs {
+  - message : String | number
+  - message_type : normal | negotiation 
 }

@@ -1,17 +1,18 @@
 meta {
-  name: deleteDriverAddress
+  name: rejectOffer
   type: http
   seq: 4
 }
 
-delete {
-  url: {{driver_url}}/addresses/:id
+post {
+  url: {{client_url}}/:shipmentId/offers/:driverId/reject
   body: none
   auth: inherit
 }
 
 params:path {
-  id: 2
+  driverId: 1
+  shipmentId: 1
 }
 
 settings {
