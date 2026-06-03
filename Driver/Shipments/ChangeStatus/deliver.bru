@@ -1,0 +1,28 @@
+meta {
+  name: deliver
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{driver_url}}/shipments/:shipmentId/deliver
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+}
+
+body:form-urlencoded {
+  image: 
+}
+
+body:multipart-form {
+  image: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

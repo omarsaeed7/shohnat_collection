@@ -1,0 +1,28 @@
+meta {
+  name: complete
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{driver_url}}/shipments/:shipmentId/complete
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+}
+
+body:form-urlencoded {
+  image: 
+}
+
+body:multipart-form {
+  code: 307077
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,28 @@
+meta {
+  name: startMoving
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{driver_url}}/shipments/:shipmentId/start-moving
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  shipmentId: 1
+}
+
+body:form-urlencoded {
+  image: 
+}
+
+body:multipart-form {
+  image: @file(/home/nami/Pictures/bmw-logo-1963-download.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: report
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{client_url}}/reports
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  message: hello
+  shipment_id: 1
+  complain_reason_id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,18 +1,18 @@
 meta {
-  name: acceptOffer
+  name: sendDeliveryCode
   type: http
-  seq: 3
+  seq: 5
 }
 
 post {
-  url: {{client_url}}/:shipmentId/offers/:driverId/accept
+  url: {{client_url}}/:shipmentId/send-delivery-code/:driverId
   body: none
   auth: inherit
 }
 
 params:path {
-  driverId: 1
   shipmentId: 1
+  driverId: 1
 }
 
 settings {
