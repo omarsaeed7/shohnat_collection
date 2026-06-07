@@ -1,0 +1,24 @@
+meta {
+  name: quickConversationSendMessage
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{driver_url}}/support/conversations/:conversationId/messages
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  conversationId: 5
+}
+
+body:multipart-form {
+  message: what is the cost of lies
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

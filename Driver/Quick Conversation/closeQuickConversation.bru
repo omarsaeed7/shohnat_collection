@@ -1,0 +1,24 @@
+meta {
+  name: closeQuickConversation
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{driver_url}}/support/conversations/:conversationId/close
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  conversationId: 2
+}
+
+body:multipart-form {
+  message: what is the cost of lies
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

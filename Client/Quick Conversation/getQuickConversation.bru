@@ -1,0 +1,16 @@
+meta {
+  name: getQuickConversation
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{client_url}}/support/conversations
+  body: multipartForm
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

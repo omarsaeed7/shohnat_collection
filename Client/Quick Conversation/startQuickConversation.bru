@@ -1,0 +1,20 @@
+meta {
+  name: startQuickConversation
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{client_url}}/support/conversations
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  message: what is the cost of lies
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
