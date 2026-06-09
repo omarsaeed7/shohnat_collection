@@ -1,0 +1,21 @@
+meta {
+  name: getPeakAreas
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{driver_url}}/peak-areas?time_window=24&min_shipments=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  time_window: 24
+  min_shipments: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

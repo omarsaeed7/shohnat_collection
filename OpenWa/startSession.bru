@@ -1,0 +1,20 @@
+meta {
+  name: startSession
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{open_wa}}/sessions/:sessionId/start
+  body: none
+  auth: inherit
+}
+
+params:path {
+  sessionId: 66aec9e4-6d95-4581-b4b2-d70247922dc6
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

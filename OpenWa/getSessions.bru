@@ -1,0 +1,16 @@
+meta {
+  name: getSessions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{open_wa}}/sessions
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

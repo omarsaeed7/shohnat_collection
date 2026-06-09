@@ -1,0 +1,27 @@
+meta {
+  name: createSession
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{open_wa}}/sessions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "test",
+    "config": {
+      "autoReconnect": true,
+          "authTimeout": 120
+    }
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

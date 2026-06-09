@@ -1,0 +1,20 @@
+meta {
+  name: stopSession
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{open_wa}}/sessions/:sessionId/stop
+  body: none
+  auth: inherit
+}
+
+params:path {
+  sessionId: 37a948e5-598f-4ab8-8c85-f842188d69ec
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
