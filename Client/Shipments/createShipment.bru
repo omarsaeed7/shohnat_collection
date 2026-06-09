@@ -39,3 +39,29 @@ settings {
   encodeUrl: true
   timeout: 0
 }
+
+docs {
+  'vehicle_type_id' => ['required', 'integer', 'exists:vehicle_types,id'], // نوع المركبة
+  'pickup_address_id' => ['nullable', 'integer', 'exists:client_addresses,id'], // عنوان من العناوين المحفوظة
+  'pickup_national_address_name' => ['required_without:pickup_address_id', 'string'], // العنوان الوطني
+  'pickup_latitude' => ['required_without:pickup_address_id', 'string'],
+  'pickup_longitude' => ['required_without:pickup_address_id', 'string'],
+  'delivery_address_id' => ['nullable', 'integer', 'exists:client_addresses,id'], // عنوان من العناوين المحفوظة
+  'delivery_national_address_name' => ['required_without:delivery_address_id', 'string'], // العنوان الوطني
+  'delivery_latitude' => ['required_without:delivery_address_id', 'string'],
+  'delivery_longitude' => ['required_without:delivery_address_id', 'string'],
+  'type' => ['required', 'string', 'max:255'],
+  'weight' => ['required', 'numeric', 'min:0'],
+  'sender_phone' => ['nullable', 'string', 'regex:/^(05|5)[0-9]{8}$/'],
+  'recipient_phone' => ['required', 'string', 'regex:/^(05|5)[0-9]{8}$/'],
+  'addition_details' => ['nullable', 'string'],
+  'is_scheduled' => ['boolean'],
+  'pickup_date' => ['nullable', 'required_if:is_scheduled,true', 'date', 'after_or_equal:today'],
+  'pickup_time' => ['nullable', 'required_if:is_scheduled,true', 'string'],
+  'coupon' => [
+      'nullable',
+      'string',
+      'max:255',],
+  'images' => ['nullable', 'array', 'max:4'],
+  'images.*' => ['image', 'mimes:jpeg,png,jpg,webp', 'max:5120'],
+}

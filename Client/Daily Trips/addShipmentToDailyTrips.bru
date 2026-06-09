@@ -1,0 +1,28 @@
+meta {
+  name: addShipmentToDailyTrips
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{client_url}}/daily-trips/:dailyTripId/shipments
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  dailyTripId: 1
+}
+
+body:multipart-form {
+  daily_trip_working_day_id: 1
+  type: package
+  recipient_phone: 0533221212
+  addition_details: hello
+  ~sender_phone: 0533221212k
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
