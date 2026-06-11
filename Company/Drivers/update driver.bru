@@ -1,0 +1,39 @@
+meta {
+  name: update driver
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{company_url}}/drivers/2
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  license_front_image: @file()
+  license_back_image: @file()
+  image: @file()
+  full_name: Ibrahim Khashaba
+  phone: 1124782714
+  phone_code: +20
+  identity_number: 12345678
+  financial_transactions: 1
+  approval_actions: 1
+  _method: put
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

@@ -1,0 +1,29 @@
+meta {
+  name: createDailyTrip
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{company_url}}/trips
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  pickup_address: cairo
+  pickup_latitude: 30.3
+  pickup_longitude: 31.1
+  delivery_address: giza
+  delivery_latitude: 30.4
+  delivery_longitude: 31.4
+  working_days[0][day]: sunday
+  working_days[0][moving_time]: 3:00
+  driver_id: 1
+  company_vechicle_id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

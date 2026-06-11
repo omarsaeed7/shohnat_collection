@@ -1,17 +1,13 @@
 meta {
-  name: getShipment
+  name: all
   type: http
-  seq: 4
+  seq: 3
 }
 
 get {
-  url: {{client_url}}/shipments/:id
+  url: {{company_url}}/trips
   body: none
   auth: inherit
-}
-
-params:path {
-  id: 5
 }
 
 settings {

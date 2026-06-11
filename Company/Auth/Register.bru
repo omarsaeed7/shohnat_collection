@@ -1,0 +1,33 @@
+meta {
+  name: Register
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{company_url}}/auth/register
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  logo: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-12 11-06-54.png)
+  name: company name
+  email: codsfs1@com.com
+  lon: 24.1235
+  lat: 0.15781
+  city_id: 7
+  password: 12345678
+  password_confirmation: 12345678
+}
+
+vars:post-response {
+  company_token: res.body.data.token
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

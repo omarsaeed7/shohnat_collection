@@ -1,0 +1,26 @@
+meta {
+  name: logout
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{company_url}}/auth/logout
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

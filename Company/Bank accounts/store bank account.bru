@@ -1,0 +1,31 @@
+meta {
+  name: store bank account
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{company_url}}/bank-accounts
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  bank_id: 1
+  IBAN: 123456
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

@@ -1,0 +1,38 @@
+meta {
+  name: store vehicle
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{company_url}}/vehicles
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  vehicle_type_id: 1
+  vehicle_color_id: 2
+  vehicle_brand_id: 3
+  license_expiration_date: 2027-12-31
+  serial_number: SN-123457
+  plate_number: ABC-1237
+  license_front_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 09-11-00.png)
+  license_back_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 09-11-00.png)
+  vehicle_front_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 14-22-42.png)
+  vehicle_back_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 14-23-51.png)
+  vehicle_left_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 14-23-51.png)
+  vehicle_right_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 14-26-36.png)
+  : 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

@@ -1,0 +1,27 @@
+meta {
+  name: rates
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{company_url}}/rates
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+  Accept-Language: ar
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

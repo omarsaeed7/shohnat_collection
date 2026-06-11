@@ -1,0 +1,26 @@
+meta {
+  name: get bank account
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{company_url}}/bank-accounts/2
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

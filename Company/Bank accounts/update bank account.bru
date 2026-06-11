@@ -1,0 +1,32 @@
+meta {
+  name: update bank account
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{company_url}}/bank-accounts/2
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  bank_id: 1
+  IBAN: 123456789
+  _method: put
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

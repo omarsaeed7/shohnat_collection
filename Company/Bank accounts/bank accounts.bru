@@ -1,0 +1,31 @@
+meta {
+  name: bank accounts
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{company_url}}/bank-accounts?limit_per_page=200&pagination_status=on
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  limit_per_page: 200
+  pagination_status: on
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

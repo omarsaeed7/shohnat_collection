@@ -1,0 +1,32 @@
+meta {
+  name: verify-phone-verification
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{company_url}}/auth/verify-phone
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  phone: 1124782714
+  phone_code: +20
+  code: 12345
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

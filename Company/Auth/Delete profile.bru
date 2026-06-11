@@ -1,0 +1,26 @@
+meta {
+  name: Delete profile
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{company_url}}/auth/delete-profile
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

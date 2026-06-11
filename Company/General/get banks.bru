@@ -1,0 +1,28 @@
+meta {
+  name: get banks
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{company_url}}/banks?limit_per_page=200&pagination_status=on
+  body: none
+  auth: none
+}
+
+params:query {
+  limit_per_page: 200
+  pagination_status: on
+}
+
+headers {
+  Accept-Language: en
+  X-Api-Key: 123456
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

@@ -1,0 +1,30 @@
+meta {
+  name: store driver
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{company_url}}/drivers
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  license_front_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-16 14-23-51.png)
+  license_back_image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-12 14-20-15.png)
+  image: @file(/home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-14 10-32-42.png)
+  full_name: Ibrahim Khashaba
+  phone: 11247827148
+  phone_code: +20
+  identity_number: 123456789
+  financial_transactions: 1
+  approval_actions: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

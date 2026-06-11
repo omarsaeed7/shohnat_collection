@@ -1,0 +1,32 @@
+meta {
+  name: faqs
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{company_url}}/faqs?limit_per_page=200&pagination_status=on
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit_per_page: 200
+  pagination_status: on
+}
+
+headers {
+  Accept-Language: en
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

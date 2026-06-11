@@ -1,0 +1,33 @@
+meta {
+  name: identity verification
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{company_url}}/auth/identity-verification
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  commercial_registration_doc: @file(/E:/C/20230824122411_[fpdl.png)
+  tax_registration_doc: @file(/E:/C/20230824122208_[fpdl.png)
+  commercial_registration_number: 123456
+  tax_number: 123456
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

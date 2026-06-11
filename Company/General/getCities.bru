@@ -1,0 +1,28 @@
+meta {
+  name: getCities
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{company_url}}/cities?limit_per_page=200&pagination_status=on
+  body: none
+  auth: none
+}
+
+params:query {
+  limit_per_page: 200
+  pagination_status: on
+}
+
+headers {
+  Accept-Language: en
+  X-Api-Key: 123456
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

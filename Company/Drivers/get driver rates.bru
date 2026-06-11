@@ -1,0 +1,32 @@
+meta {
+  name: get driver rates
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{company_url}}/drivers/rates/2?limit_per_page=200&pagination_status=on
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  limit_per_page: 200
+  pagination_status: on
+}
+
+headers {
+  X-Api-Key: 123456
+  Accept-Language: ar
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

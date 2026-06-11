@@ -1,0 +1,36 @@
+meta {
+  name: Update profile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{company_url}}/auth/update-profile
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  logo: @file(/E:/C/20230824122208_[fpdl.png)
+  name: company name 2
+  lon: 24.1235
+  lat: 0.15781
+  city_id: 5
+  address: الرياض - حي السليمانية
+  _method: put
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}

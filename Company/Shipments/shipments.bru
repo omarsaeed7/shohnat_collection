@@ -1,18 +1,13 @@
 meta {
-  name: getChat
+  name: shipments
   type: http
   seq: 1
 }
 
 get {
-  url: {{client_url}}/:shipmentId/chat/:driverId
+  url: {{company_url}}/shipments
   body: none
   auth: inherit
-}
-
-params:path {
-  driverId: 1
-  shipmentId: 5
 }
 
 settings {

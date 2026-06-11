@@ -1,0 +1,42 @@
+meta {
+  name: update vehicle
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{company_url}}/vehicles/1
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  ~X-Api-Key: 123456
+}
+
+auth:bearer {
+  token: {{company_token}}
+}
+
+body:multipart-form {
+  vehicle_type_id: 1
+  vehicle_color_id: 2
+  vehicle_brand_id: 3
+  license_expiration_date: 2027-12-31
+  serial_number: SN-12345612
+  plate_number: ABC-12312
+  license_front_image: 
+  license_back_image: 
+  _method: put
+  ~vehicle_front_image: 
+  ~vehicle_back_image: 
+  ~vehicle_left_image: 
+  ~vehicle_right_image: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+}
