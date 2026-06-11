@@ -1,17 +1,17 @@
 meta {
-  name: acceptOffer
+  name: quickTrack
   type: http
-  seq: 3
+  seq: 8
 }
 
-post {
-  url: {{driver_url}}/:shipmentId/offers/accept
+get {
+  url: {{client_url}}/track/:shipmentNumber
   body: none
   auth: inherit
 }
 
 params:path {
-  shipmentId: 5
+  shipmentNumber: 10000
 }
 
 settings {
