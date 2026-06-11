@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{company_url}}/trips
+  url: {{company_url}}/trips?is_active=1
   body: none
   auth: inherit
+}
+
+params:query {
+  is_active: 1
 }
 
 settings {

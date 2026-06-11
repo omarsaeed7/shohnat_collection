@@ -1,0 +1,21 @@
+meta {
+  name: assign to drvier
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{company_url}}/assign-driver-for-shipment?driver_id=1&shipment_id=1
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  driver_id: 1
+  shipment_id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

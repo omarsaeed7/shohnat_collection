@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{company_url}}/shipments
+  url: {{company_url}}/shipments/:shipment_id
   body: none
   auth: inherit
+}
+
+params:path {
+  shipment_id: 1
 }
 
 settings {

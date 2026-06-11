@@ -1,0 +1,21 @@
+meta {
+  name: assign vehicle
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{company_url}}/assign-company-vechicle-for-shipment?shipment_id=1&vehicle_id=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  shipment_id: 1
+  vehicle_id: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

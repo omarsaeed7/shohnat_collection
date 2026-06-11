@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{company_url}}/shipments
+  url: {{company_url}}/shipments?search=41
   body: none
   auth: inherit
+}
+
+params:query {
+  search: 41
+  ~now: 1
 }
 
 settings {
